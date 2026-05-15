@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt - br">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,31 +9,30 @@
 <body>
     <div class="container">
         <h1>TechStore SESI</h1>
-    <section class="formulario">
-        <h3>Dados da Venda</h3>
-        <input type="text" id="inputNome" placeholder="Nome do cliente">
-        <input type="number" id="inputValor" placeholder="Idade do Cliente">
-        <input type="number" id="inputValor" placeholder="Valor Total (R$)">
 
-        <select id="inputCupom">
-            <option value="false">Não possui cupom</option>
-            <option value="true">Possui cupom (15% OFF)</option>
-        </select>
+        <section class="formulario">
+            <h3>Dados da Venda</h3>
+            <input type="text" id="inputNome" placeholder="Nome do cliente">
+            <input type="number" id="inputIdade" placeholder="Idade do cliente">
+            <input type="number" id="inputValor" placeholder="Valor Total (R$)">
 
-        <button onclick="executarSistema()">Finalizar Venda</button>
-    </section>
+            <select id="inputCupom">
+                <option value="false">Não possui cupom</option>
+                <option value="true">Possui cupom (15% OFF)</option>
+            </select>
 
-    <hr>
+            <button onclick="executarSistema()">Finalizar Venda</button>
+        </section>
 
-    <section id="feedback">
-        <p id="mensagem-autorização">Preencha os dados acima.</p>
-        <ul id="lista-estoque"></ul>
-        <div id="relatorio-final" class="card" style="display: none;">
-        </div>
-   </section>
+        <hr>
 
+        <section id="feedback">
+            <p id="mensagem-autorizacao">Preencha os dados acima.</p>
+            <ul id="lista-estoque"></ul>
+            <div id="relatorio-final" class="card" style="display: none;">
+            </div>
+        </section>
     </div>
-
-    <script src="script"></script
+    <script src="script.js"></script>
 </body>
 </html>
