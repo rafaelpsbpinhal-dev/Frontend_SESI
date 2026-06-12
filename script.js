@@ -10,7 +10,7 @@ function executarSistema() {
     const lista = document.getElementById("lista-estoque");
     const relatorio = document.getElementById("relatorio-final");
 
-    // validação para cmapos vazios 
+    // validação para campos vazios 
     if (!nome || isNaN(idade) || isNaN(valor)) {
         alert("Por favor, peencha todos os campos!!");
         return;
@@ -44,22 +44,16 @@ function executarSistema() {
         <strong> Total com descoto: R$ ${valorFinal.toFixed(2)} <\strong>
         `;
 
-        // ==========================================================
-        // TRECHO ADICIONADO PARA A SUA QUESTÃO (LIMPEZA DOS CAMPOS):
-        // ==========================================================
+        // Limpeza dos campos (sua questão)
         document.getElementById("inputNome").value = "";
         document.getElementById("inputIdade").value = "";
         document.getElementById("inputValor").value = "";
         document.getElementById("inputCupom").value = "false"; 
-        // ==========================================================
 
     } else {
         msg.innerText = "Venda bloqueada: menor de 16 anos.";
         msg.style.color = "#f0f4444";
         relatorio.style.display = "none";
         lista.innerHTML = "";
-
     }
-
-
 }
