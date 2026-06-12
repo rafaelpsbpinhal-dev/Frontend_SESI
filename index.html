@@ -7,13 +7,17 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
     <div class="container">
         <h1>TechStore SESI</h1>
 
         <section class="formulario">
             <h3>Dados da Venda</h3>
-            <input type="text" id="inputNome" placeholder="Nome do cliente">
+
+            <input type="text" id="inputNome" placeholder="Nome do cliente" autofocus>
+
             <input type="number" id="inputIdade" placeholder="Idade do cliente">
+
             <input type="number" id="inputValor" placeholder="Valor Total (R$)">
 
             <select id="inputCupom">
@@ -21,18 +25,49 @@
                 <option value="true">Possui cupom (15% OFF)</option>
             </select>
 
-            <button onclick="executarSistema()">Finalizar Venda</button>
+            <button onclick="executarSistema()">
+                Finalizar Venda
+            </button>
+
+            <!-- Modal -->
+            <div id="myModal" class="modal">
+
+                <!-- Conteúdo do Modal -->
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+
+                    <h2>Venda Concluída</h2>
+
+                    <p id="textoModal">
+                        Venda realizada com sucesso!
+                    </p>
+
+                </div>
+
+            </div>
+
         </section>
 
         <hr>
 
         <section id="feedback">
-            <p id="mensagem-autorizacao">Preencha os dados acima.</p>
+            <p id="mensagem-autorizacao">
+                Preencha os dados acima.
+            </p>
+
             <ul id="lista-estoque"></ul>
+
             <div id="relatorio-final" class="card" style="display: none;">
             </div>
         </section>
+
     </div>
+
+    <div id="notificacao" class="notificacao">
+        ✅ Venda realizada com sucesso!
+    </div>
+
     <script src="script.js"></script>
+
 </body>
 </html>
